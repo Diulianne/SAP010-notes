@@ -28,6 +28,7 @@ const LoginWithGoogle = () => {
     <div>
       <h2>Login com o Google</h2>
       <button onClick={handleSignInWithGoogle}>Login com o Google</button>
+      <p onClick={() => navigate('/cadastro')}>Ainda não tem conta? Criar uma</p>
     </div>
   );
 };
