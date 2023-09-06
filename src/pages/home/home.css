@@ -1,3 +1,9 @@
-h2 {
-    color: aqua;
+.container {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+}
+
+button {
+    color: rgb(255, 0, 0);
 }
