@@ -10,6 +10,9 @@ const Authenticated = ({ children }) => {
       if (authUser) {
         setIsLoggedIn(true);
         console.log('Usuário está logado como', authUser.email);
+
+        const photoURL = authUser.photoURL;
+        console.log('URL da imagem do perfil:', photoURL);
       } else {
         setIsLoggedIn(false);
         console.log('Usuário não está logado');
