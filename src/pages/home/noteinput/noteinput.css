@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=PT+Sans:wght@600&display=swap');
+
+
+.new-note {
+    /* width: 600px; */
+    width: 60%;
+    height: 135px;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    border: 1px solid #5C5C5C;
+    background-color:#2F2F2F;
+
+    overflow: hidden;
+
+}
+.title-new-note {
+    font-family: 'Open Sans', sans-serif;
+    width: 95%;
+    border: none;
+    margin-top: 0;
+    margin-left: 8px;
+    color: #B3B3B3;   
+}
+
+.title-new-note:focus {
+    box-shadow: none;
+}
+
+.input-new-note {
+    font-family: 'Open Sans', sans-serif;
+    width: 95%;
+    border: none;
+    margin-top: -15px;
+    margin-left: 8px;
+    color: #FFFFFF;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    resize: none; 
+
+    overflow: hidden; 
+    min-height: 50px;
+}
+
+.input-new-note::placeholder {
+    color: #ffffff; 
+}
+
+.submit {
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+    margin-top: -5px;
+}
+
+
+@media (max-width: 480px) {
+    .new-note {
+        width: 300px;
+        height: 125px;
+        top: 20%;  
+    }
+
+    .submit {
+        margin-top: -5px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .new-note {
+        width: 600px;
+        top: 25%;  
+    }
+    .submit {
+        margin-top: -5px;
+    }
+} 

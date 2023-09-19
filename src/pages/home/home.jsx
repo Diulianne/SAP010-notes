@@ -3,7 +3,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { auth } from "../firebaseConfig";
 import { useEffect, useState, } from 'react';
-
+import NoteInput from './noteinput/NoteInput';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -71,8 +71,8 @@ const HomePage = () => {
             </div>
           </div>
         )}
-
       </header>
+      <NoteInput />
     </div>
   )
 }
