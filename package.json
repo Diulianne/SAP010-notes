@@ -4,18 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "react-scripts test",
     "pretest": "npm run eslint",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "eslint": "eslint --ext .js src/",
     "preview": "vite preview"
   },
+  
   "dependencies": {
     "firebase": "^10.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.15.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@testing-library/react": "^14.0.0",
@@ -23,6 +25,7 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
     "eslint": "^8.45.0",
+    "eslint-plugin-jest": "^27.4.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
