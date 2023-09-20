@@ -62,7 +62,7 @@ const NoteInput = () => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <button className='submit' type="submit">✔</button>
+        <button className='submit' type="submit">Anotar</button>
       </form>
     </div>
   );
