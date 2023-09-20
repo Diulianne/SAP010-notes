@@ -5,7 +5,7 @@
     /* width: 600px; */
     width: 60%;
     height: 135px;
-    position: fixed;
+    position: absolute; 
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -58,6 +58,10 @@
     margin-top: -5px;
 }
 
+.submit:hover {
+    background-color: #262626;
+    border-radius: 10px;
+}
 
 @media (max-width: 480px) {
     .new-note {
