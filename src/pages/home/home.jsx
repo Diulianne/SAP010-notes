@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from "../firebaseConfig";
 import { useEffect, useState, } from 'react';
 import NoteInput from './noteinput/NoteInput';
+import NotesList from './notelist/NoteList';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -73,6 +74,7 @@ const HomePage = () => {
         )}
       </header>
       <NoteInput />
+      <NotesList />
     </div>
   )
 }

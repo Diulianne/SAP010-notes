@@ -6,44 +6,39 @@ import './noteinput.css'
 const NoteInput = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const user = auth.currentUser; // Obtenha o usuário autenticado
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Verifique se o título e o conteúdo não estão em branco
     if (!title.trim() || !content.trim()) {
-      // Exiba uma mensagem de erro ao usuário, se desejar
       console.error('Título e conteúdo são obrigatórios.');
       return;
     }
-    // Obtém o ID do usuário autenticado
-    const userId = auth.currentUser.uid;
+    const userId = user.uid; // Use o ID do usuário autenticado
 
-    // Obtém uma referência para a coleção "users" e "notes" no Firestore
     const usersRef = collection(db, 'users');
     const notesRef = collection(db, 'notes');
 
-    // Crie um documento na coleção "users" se ele ainda não existir
     addDoc(usersRef, {
       uid: userId,
-      email: auth.currentUser.email,
-      displayName: auth.currentUser.displayName,
+      email: user.email,
+      displayName: user.displayName,
     })
       .then(() => {
-        // Crie um documento na coleção "notes" com os dados da nota
         return addDoc(notesRef, {
           title,
           content,
-          user: userId,
+          user: userId, 
           lastModified: new Date(),
         });
       })
-      .then(() => {
-        // Limpe o formulário após o envio
+      .then((docRef) => {
+        console.log('ID da nova nota:', docRef.id);
         setTitle('');
         setContent('');
       })
       .catch((error) => {
-        // Lide com erros aqui, por exemplo, exibindo uma mensagem de erro ao usuário
         console.error('Erro ao adicionar nota:', error);
       });
   };
