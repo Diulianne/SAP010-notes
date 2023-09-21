@@ -4,7 +4,6 @@ import { auth } from "../firebaseConfig";
 import { useNavigate } from 'react-router-dom';
 import "../login/login.css"
 
-
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
