@@ -11,13 +11,13 @@
     "eslint": "eslint --ext .js src/",
     "preview": "vite preview"
   },
-  
   "dependencies": {
     "firebase": "^10.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@testing-library/react": "^14.0.0",

@@ -1,18 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=PT+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=PT+Sans:wght@400&display=swap');
+
+/* CSS para a lista de notas */
 .note-list {
-    /* width: 600px; */
     width: 90%;
-    height: auto;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #00000000;
+    white-space: nowrap;
+    overflow-x: auto;
+
+}
+
+/* CSS para cada nota individual */
+/* .note {
+    display: inline-block;
+    width: calc(33.33% - 20px);
+    margin: 10px;
     border-radius: 10px;
     border: 1px solid #5C5C5C;
     background-color: #2F2F2F;
-    color: aliceblue;
+    white-space: normal;
+    text-align: left;
+    vertical-align: top;
+} */
+
+/* Estilo para o título da nota */
+.note h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #B3B3B3;
+    padding-left: 8px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.notes-container {
-    background-color: rgb(55, 57, 57);
-    color: rgb(189, 189, 189);
+.note-list h3 {
+    color: rgb(255, 255, 255);
+}
+
+/* Estilo para o conteúdo da nota */
+.note p {
+    font-size: 15px;
+    color: #FFFFFF;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Estilo para a data de edição da nota */
+.note p:last-child {
+    font-size: 10px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+/* .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} */
+
+
+/* .pin,
+.trash{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    background-color: aqua;
+} */
+
+/* Estilo para a classe .note */
+.note {
+    flex-direction: column;
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #5C5C5C;
+    background-color: #2F2F2F;
+    white-space: normal;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Estilo para a classe .header */
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pin,
+.trash {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 1200px) {
+    .note-list {
+        width: 90%;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #00000000;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
 }
