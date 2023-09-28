@@ -3,19 +3,19 @@
 
 /* CSS para a lista de notas */
 .note-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    background-color: #2F2F2F;
     width: 90%;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #00000000;
-    white-space: nowrap;
-    overflow-x: auto;
-
+    margin: 35% auto;
+    /* white-space: normal; */
 }
 
-/* CSS para cada nota individual */
-/* .note {
+/* Estilo para a classe .note */
+.note {
+    flex-direction: column;
+    box-sizing: border-box;
     display: inline-block;
     width: calc(33.33% - 20px);
     margin: 10px;
@@ -25,7 +25,7 @@
     white-space: normal;
     text-align: left;
     vertical-align: top;
-} */
+}
 
 /* Estilo para o título da nota */
 .note h2 {
@@ -49,6 +49,7 @@
     color: #FFFFFF;
     padding-left: 8px;
     padding-right: 8px;
+    word-wrap: break-word;
 }
 
 /* Estilo para a data de edição da nota */
@@ -58,35 +59,7 @@
     font-weight: 400;
 }
 
-/* .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-} */
 
-
-/* .pin,
-.trash{
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    cursor: pointer;
-    background-color: aqua;
-} */
-
-/* Estilo para a classe .note */
-.note {
-    flex-direction: column;
-    box-sizing: border-box;
-    display: inline-block;
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    border-radius: 10px;
-    border: 1px solid #5C5C5C;
-    background-color: #2F2F2F;
-    white-space: normal;
-    text-align: left;
-    vertical-align: top;
-}
 
 /* Estilo para a classe .header */
 .header2 {
@@ -108,15 +81,49 @@
     align-items: center;
 }
 
+@media (max-width: 480px) {
+    .note-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        background-color: #2F2F2F;
+        margin: 65% auto;
+    }
+
+    .note {
+        width: 50%;
+        margin: 3px 0px;
+    }
+}
+
+@media (min-width: 906px) {
+    .note-list {
+        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        margin: 35% auto;
+    }
+
+}
+
 @media (min-width: 1200px) {
     .note-list {
-        width: 90%;
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #00000000;
-        white-space: nowrap;
-        overflow-x: auto;
+        grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+        margin: 40vh auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #5c5d5f;
+        border-radius: 6px;
+
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #424040;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #4f4f50;
     }
 }
