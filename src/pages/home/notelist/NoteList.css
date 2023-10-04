@@ -81,6 +81,12 @@
     align-items: center;
 }
 
+/* Estilo para o campo editável da nota quando em modo de edição */
+.note p[contentEditable='true'] { 
+    outline: none;
+    border: none;
+}
+
 @media (max-width: 480px) {
     .note-list {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

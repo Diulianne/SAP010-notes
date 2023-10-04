@@ -58,7 +58,7 @@
 
 
 import { useEffect, useState } from 'react';
-import { collection, query, where, onSnapshot, doc, deleteDoc } from 'firebase/firestore';
+import { collection, query, where, onSnapshot, doc, deleteDoc, updateDoc } from 'firebase/firestore';
 import { auth, db } from '../../firebaseConfig';
 import './NoteList.css';
 
@@ -101,6 +101,18 @@ const NotesList = () => {
     }
   };
 
+  const handleNoteContentChange = async (noteId, newContent) => {
+    try {
+      const noteRef = doc(db, 'notes', noteId);
+      await updateDoc(noteRef, {
+        content: newContent,
+        lastModified: new Date(),
+      });
+    } catch (error) {
+      console.error('Erro ao atualizar a nota:', error);
+    }
+  };
+
 
   return (
     <div className='note-list'>
@@ -114,7 +126,17 @@ const NotesList = () => {
               <h2>{note.title}</h2>
               <button className="material-symbols-outlined pin">push_pin</button>
             </div>
-            <p>{note.content}</p>
+            <p
+              contentEditable={true}
+              onBlur={(e) => {
+                const newContent = e.target.textContent;
+                handleNoteContentChange(note.id, newContent);
+              }}
+              suppressContentEditableWarning={true}
+            >
+              {note.content}
+            </p>
+            {/* <p>{note.content}</p> */}
             <div className="footer">
               <p>Editada {note.lastModified.toDate().toLocaleDateString(undefined, { day: 'numeric', month: 'short' })}</p>
               <button
