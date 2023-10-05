@@ -10,6 +10,7 @@ const HomePage = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [showLogoutButton, setShowLogoutButton] = useState(false);
+  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authUser) => {
@@ -37,6 +38,8 @@ const HomePage = () => {
   };
 
 
+
+
   return (
     <div className="container">
       <header className="header">
@@ -50,7 +53,13 @@ const HomePage = () => {
         </div>
         <div className="search-container">
           <span className="material-symbols-outlined">search</span>
-          <input type="text" className="search-box" placeholder="Pesquisar" />
+          <input
+            type="text"
+            className="search-box"
+            placeholder="Pesquisar"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
         </div>
         {user && (
           <div className={`user-profile ${showLogoutButton ? 'show-logout-button' : ''}`}>
@@ -74,7 +83,7 @@ const HomePage = () => {
         )}
       </header>
       <NoteInput />
-      <NotesList />
+      <NotesList searchText={searchText} />
     </div>
   )
 }
