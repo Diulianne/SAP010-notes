@@ -31,9 +31,7 @@ test('handles Google login button click', () => {
   
   fireEvent.click(googleButton);
   
-  //pode adicionar asserções aqui para verificar se a função `signInWithPopup` é chamada corretamente.
 });
-
 
 
 // jest.mock('react-router-dom', () => ({

@@ -62,11 +62,14 @@ const HomePage = () => {
           />
         </div>
         {user && (
-          <div className={`user-profile ${showLogoutButton ? 'show-logout-button' : ''}`}>
+          <div
+            className={`user-profile ${showLogoutButton ? 'show-logout-button' : ''}`}
+          >
             <img
               className="user-avatar"
-              src={user.photoURL || 'user.png'} // Use uma imagem padrão se a URL não estiver disponível
+              src={user.photoURL || 'user.png'}
               alt="User Avatar"
+              onClick={() => setShowLogoutButton(!showLogoutButton)}
             />
             <div className="user-info">
               <span
@@ -81,6 +84,7 @@ const HomePage = () => {
             </div>
           </div>
         )}
+
       </header>
       <NoteInput />
       <NotesList searchText={searchText} />

@@ -68,13 +68,13 @@ const NotesList = (props) => {
     <div className='note-list'>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-      <h3>Lista de Notas</h3>
+      <p className='notes-container-title'>NOTAS</p>
       <div className="notes-container">
         {filteredNotes.map((note) => (
           <div className="note" key={note.id}>
             <div className="header2">
               <h2>{note.title}</h2>
-              <button className="material-symbols-outlined pin">push_pin</button>
+              {/* <button className="material-symbols-outlined pin">push_pin</button> */}
             </div>
             <p
               contentEditable={true}
