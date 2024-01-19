@@ -12,6 +12,8 @@ Excluir Notas: Remova as notas que não são mais necessárias com um simples to
 
 Data de Última Edição: Visualize a data da última edição de cada nota para rastrear as alterações.
 
+Pesquisar Notas: Pesquise pelas notas que deseja vizualizar de maneira rápida e eficiente.
+
 Tecnologias Utilizadas
 React: Desenvolvido usando a biblioteca React para uma construção eficiente e escalável da interface do usuário.
 
@@ -19,10 +21,5 @@ Firebase: Utilizado como backend para armazenar e gerenciar as notas de forma se
 
 Responsividade: O LabNotes é uma aplicação de página única e possui uma interface responsiva, garantindo uma experiência consistente em tablets e dispositivos móveis.
 
-Instalação
-Clone o repositório: git clone https://github.com/seu-usuario/labnotes.git
-Navegue até o diretório: cd labnotes
-Instale as dependências: npm install
-Inicie o aplicativo: npm start
 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorar o LabNotes.
