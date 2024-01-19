@@ -21,5 +21,6 @@ Firebase: Utilizado como backend para armazenar e gerenciar as notas de forma se
 
 Responsividade: O LabNotes é uma aplicação de página única e possui uma interface responsiva, garantindo uma experiência consistente em tablets e dispositivos móveis.
 
+Figma, JavaScript, html, css
 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorar o LabNotes.
